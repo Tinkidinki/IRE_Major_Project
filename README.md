@@ -14,16 +14,6 @@ https://www.aclweb.org/anthology/S/S17/S17-2083.pdf).
 This version of the code uses Python 2.7 with the Lasagne and Theano libraries.
 
 
-## Table of Contents
-
-- [Option 1: Installation on a local machine](#option-1-installation-on-a-local-machine)
-- [Option 2: Installation on a Microsoft Azure VM with GPU](#option-2-installation-on-a-microsoft-azure-vm-with-gpu)
-- [Run with the hyperparameters used in the paper](#run-with-the-hyperparameters-used-in-the-paper)
-- [Run with a new set of optimised hyperparameters](#run-with-a-new-set-of-optimised-hyperparameters)
-- [Code structure](#code-structure)
-- [Contact](#contact)
-
-
 To begin, clone this repository.
 ```
 git clone https://github.com/Tinkidinki/branch-lstm-testing.git
@@ -56,6 +46,7 @@ python2 preprocessing.py
 THEANO_FLAGS='floatX=float32' python2 outer.py
 ```
 (This command takes about 15 minutes to run.)
+
 The results are saved in `output/predictions.txt` in a format compatible with the scoring script.
 * Evaluate the performance of the model with the official SemEval-2017 scoring script (this script uses Python 3 rather than Python 2, so we specify the correct Python version).
 ```
