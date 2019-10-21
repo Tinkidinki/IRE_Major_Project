@@ -50,10 +50,12 @@ This option can be run on machines both with and without a GPU, but you may find
 ```
 python2 preprocessing.py
 ```
+(This command should take around 2 minutes to run.)
 * Construct the model using the optimal set of hyperparameters and apply to the test dataset. The hyperparameters will be loaded from `output/bestparams_semeval2017.txt`.
 ```
 THEANO_FLAGS='floatX=float32' python2 outer.py
 ```
+(This command takes about 15 minutes to run.)
 The results are saved in `output/predictions.txt` in a format compatible with the scoring script.
 * Evaluate the performance of the model with the official SemEval-2017 scoring script (this script uses Python 3 rather than Python 2, so we specify the correct Python version).
 ```
