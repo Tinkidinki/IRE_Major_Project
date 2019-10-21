@@ -129,7 +129,9 @@ def eval_train_model(params):
 
 #%%
     #start training loop
-    # We iterate over epochs:
+    # We iterate over epochs:``
+    # print "num_epochs" + num_epochs
+    # exit(0)
     for epoch in range(num_epochs):
         #print("Epoch {} ".format(epoch))
         train_err = 0

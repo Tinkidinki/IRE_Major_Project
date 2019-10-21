@@ -66,7 +66,7 @@ def parameter_search(ntrials, hyperopt_seed, is_test=False):
                         'rng_seed': hp.choice('rng_seed', [364])
     }
     else:
-        # Parameter values tested for SemEval-2017 Task 8
+        # Parameter values tested for SemEval-2019 Task 8
         search_space= { 'num_dense_layers': hp.choice('nlayers',[1,2,3,4]),
                         'num_dense_units': hp.choice('num_dense', [100, 200, 300,
                                                                    400, 500]),
@@ -165,7 +165,7 @@ def main():
     parser.add_option('--hseed', dest='hseed', default=None,
             help="Value of the rng seed passed to hyperopt's fmin function: default=%default")
     parser.add_option(
-            '--params', dest='params_file', default='output/bestparams_semeval2017.txt',
+            '--params', dest='params_file', default='output/bestparams_semeval2019.txt',
             help='Location of parameter file: default=%default')
     parser.add_option(
             '--test', dest='is_test', default=False,

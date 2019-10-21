@@ -8,7 +8,7 @@
 # Preprocessed data
 /saved_data
 
-# Results (apart from the set used in SemEval-2017 Task 8)
+# Results (apart from the set used in SemEval-2019 Task 8)
 /output/*
 !/output/bestparams_semeval2017.txt
 
@@ -17,6 +17,9 @@
 
 # PyCharm hidden files
 .idea
+
+#src
+src/*
 
 #################################
 ### GitHub's Python.gitignore ###

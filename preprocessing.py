@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """
+Ignore the below comment - Train and test data is from 2019:
+
 This file contains preprocessing routines to convert RumourEval data 
 into the format of branchLSTM input: it splits conversation trees into 
 branches and extracts features from tweets including average of word2vec and 
@@ -32,7 +34,7 @@ def load_true_labels(dataset_name):
 
     # Training and development datasets should be stored in the downloaded_data folder (see installation instructions).
     # The test data is kept in the repo for now.
-    traindev_path = os.path.join("downloaded_data", "semeval2017-task8-dataset", "traindev")
+    traindev_path = os.path.join("downloaded_data", "semeval2019-task8-dataset", "traindev")
     data_files = {"dev": os.path.join(traindev_path, "rumoureval-subtaskA-dev.json"),
                   "train": os.path.join(traindev_path, "rumoureval-subtaskA-train.json"),
                   "test": "subtaska.json"}
@@ -54,7 +56,7 @@ def load_dataset():
     train_tweets = train.keys()
 
     # Load folds and conversations
-    path_to_folds = os.path.join('downloaded_data', 'semeval2017-task8-dataset/rumoureval-data')
+    path_to_folds = os.path.join('downloaded_data', 'semeval2019-task8-dataset/rumoureval-data')
     folds = sorted(os.listdir(path_to_folds))
     newfolds = [i for i in folds if i[0] != '.']
     folds = newfolds
@@ -150,10 +152,17 @@ def load_dataset():
         allconv = []
 
     # Load testing data
-    path_to_test = os.path.join('downloaded_data', 'semeval2017-task8-test-data')
-    test_folders = sorted(os.listdir(path_to_test))
-    newfolds = [i for i in test_folders if i[0] != '.']
-    test_folders = newfolds
+    path_to_test = os.path.join('downloaded_data', 'semeval2019-task8-test-data')
+    outer_folders = sorted(os.listdir(path_to_test))
+    newfolds = [i for i in outer_folders if i[0] != '.']
+    outer_folders = newfolds
+
+    test_folders = []
+    for out in outer_folders:
+        path_to_outer = os.path.join('downloaded_data', 'semeval2019-task8-test-data',out)
+        inner_folders = [os.path.join(out, inner) for inner in sorted(os.listdir(path_to_outer))]
+        test_folders.extend(inner_folders)
+
     conversation = {}
     for tfldr in test_folders:
         conversation['id'] = tfldr
