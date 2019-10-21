@@ -93,17 +93,18 @@ def build_nn(input_var, mask, num_features, num_lstm_layers, num_lstm_units,
 
 def iterate_minibatches(inputs, mask, rmdoublemask, targets,
                         batchsize, max_seq_len=25, shuffle=False):
-    print "Before: target size:", targets.size
-    print "Before: len of targets", len(targets)
-    print "Before: len of batchsize", batchsize
-    print "Before: Len of inputs:", len(inputs)
-    print "Before: Len of rmdoublemask:", len(rmdoublemask)
-    print "Before: Size of rmdoublemask:", rmdoublemask.size
+    
+    # print "Before: target size:", targets.size
+    # print "Before: len of targets", len(targets)
+    # print "Before: len of batchsize", batchsize
+    # print "Before: Len of inputs:", len(inputs)
+    # print "Before: Len of rmdoublemask:", len(rmdoublemask)
+    # print "Before: Size of rmdoublemask:", rmdoublemask.size
     # targets = numpy.reshape(targets, (-1, max_seq_len))
     # rmdoublemask = numpy.reshape(rmdoublemask, (-1, max_seq_len))
     rmdoublemask = numpy.reshape(rmdoublemask, (len(targets), -1))
-    print "Len of inputs:", len(inputs)
-    print "len of targets", len(targets)
+    # print "Len of inputs:", len(inputs)
+    # print "len of targets", len(targets)
     assert len(inputs) == len(targets)
     if shuffle:
         indices = numpy.arange(len(inputs))

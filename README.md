@@ -48,7 +48,7 @@ This option can be run on machines both with and without a GPU, but you may find
 
 * Run the preprocessing stage to convert the data into a format that is compatible with Lasagne.
 ```
-python preprocessing.py
+python2 preprocessing.py
 ```
 * Construct the model using the optimal set of hyperparameters and apply to the test dataset. The hyperparameters will be loaded from `output/bestparams_semeval2017.txt`.
 ```

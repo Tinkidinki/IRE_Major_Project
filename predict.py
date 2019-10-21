@@ -133,6 +133,7 @@ def eval_train_model(params):
     # print "num_epochs" + num_epochs
     # exit(0)
     for epoch in range(num_epochs):
+        print "Epochs: " + str(epoch) + "/" + str(num_epochs)
         #print("Epoch {} ".format(epoch))
         train_err = 0
         # In each epoch, we do a full pass over the training data:

@@ -165,7 +165,7 @@ def main():
     parser.add_option('--hseed', dest='hseed', default=None,
             help="Value of the rng seed passed to hyperopt's fmin function: default=%default")
     parser.add_option(
-            '--params', dest='params_file', default='output/bestparams_semeval2019.txt',
+            '--params', dest='params_file', default='output/bestparams_semeval2017.txt',
             help='Location of parameter file: default=%default')
     parser.add_option(
             '--test', dest='is_test', default=False,
