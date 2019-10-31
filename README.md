@@ -97,7 +97,3 @@ python depth_analysis.py
 `bestparams_semeval2017.txt`
   * This file stores the parameters used in the competition and paper
 
-
-## Contact
-
-Feel free to email E.Kochkina@warwick.ac.uk if you have any questions.
