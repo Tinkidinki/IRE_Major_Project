@@ -26,7 +26,7 @@ pip install gdown
 gdown https://drive.google.com/drive/u/0/folders/1VwFSTDr7e30YQw8UJlvbvhGeznAHdRyb
 gdown https://drive.google.com/drive/u/0/folders/1VwFSTDr7e30YQw8UJlvbvhGeznAHdRyb
 ```
-
+In case the `gdown` commands don't work, please directly download from the links.
 ### Extract 
 
 ```
