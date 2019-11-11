@@ -1,4 +1,4 @@
-# branchLSTM
+# Sub Task A
 
 This repo has been cloned from [here](https://github.com/kochkinaelena/branchLSTM).
 - The 2017 winning code of the Semeval competition has been trained and evaluated on the 2019 contest Twitter data. 
@@ -96,4 +96,9 @@ python depth_analysis.py
 
 `bestparams_semeval2017.txt`
   * This file stores the parameters used in the competition and paper
+  
+  # To Run Subtask B
+
+To run the code, open subtask_b in Jupyter Notebook and run all the cells.  
+
 
