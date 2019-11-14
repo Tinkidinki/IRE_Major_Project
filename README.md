@@ -1,8 +1,8 @@
 # Sub Task A
 
-This repo has been cloned from [here](https://github.com/kochkinaelena/branchLSTM).
+<!-- This repo has been cloned from [here](https://github.com/kochkinaelena/branchLSTM). -->
 - The 2017 winning code of the Semeval competition has been trained and evaluated on the 2019 contest Twitter data. 
-- A few changes have been made, including changing the data into the right format, and resolving a few errors. 
+- A few changes have been made, including changing the data into the right format, and resolving a dependency errors.
 - Please read this README file carefully to run the data. For the original README, look at the aforementioned repository.
 - In this code, we use the optimal hyperparameters as found in the below research paper. 
 
@@ -33,6 +33,9 @@ pip install -r requirements.txt
 ```
 
 ## Run with the hyperparameters used in the paper
+
+Running the python notebook.
+To Run the python notebooks we need to 
 
 This option can be run on machines both with and without a GPU, but you may find subtly different results from the paper when using approaches other than that described in the Option 2 installation instructions.
 
