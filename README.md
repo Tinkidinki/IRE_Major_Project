@@ -1,5 +1,6 @@
 # Sub Task A
 
+For the first method we tried, please visit: [The Transformers repository](https://github.com/paliwal-jatin/Transformers)
 <!-- This repo has been cloned from [here](https://github.com/kochkinaelena/branchLSTM). -->
 - The 2017 winning code of the Semeval competition has been trained and evaluated on the 2019 contest Twitter data. 
 - A few changes have been made, including changing the data into the right format, and resolving a dependency errors.
